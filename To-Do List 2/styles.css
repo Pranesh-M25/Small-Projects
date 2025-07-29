@@ -1,0 +1,43 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+button{
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.add{
+  background-color: green;
+}
+.todoIn{
+  padding: 5px 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+.dateIn{
+  padding: 5px 20px;
+  margin: 0px 10px 0px 10px;
+  font-size: 1rem;
+}
+.deleteBtn{
+  background-color: red;
+}
+.inputDiv{
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.todo-Grid, .inputDiv{
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}

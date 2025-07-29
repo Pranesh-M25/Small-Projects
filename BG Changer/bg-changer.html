@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Changer</title>
+</head>
+<body>
+ <div style="display: flex; justify-content: center; align-items: center; height: 100vh;
+  "> <button onclick="changeBG();">Change BG Color</button></div>
+  <script>
+    
+    function changeBG (){
+      let randomNO = Math.random();
+    console.log(randomNO);
+      if(randomNO < 0.1 && randomNO > 0){
+        document.body.style.backgroundColor = "red";
+      } else if (randomNO < 0.2 && randomNO > 0.1){
+        document.body.style.backgroundColor = "blue";
+      } else if (randomNO < 0.3 && randomNO > 0.2){
+        document.body.style.backgroundColor = "green";
+      } else if (randomNO < 0.4 && randomNO > 0.3){
+        document.body.style.backgroundColor = "yellow";
+      } else if (randomNO < 0.5 && randomNO > 0.4){
+        document.body.style.backgroundColor = "orange";
+      } else if (randomNO < 0.6 && randomNO > 0.5){
+        document.body.style.backgroundColor = "brown";
+      } else if (randomNO < 0.7 && randomNO > 0.6){
+        document.body.style.backgroundColor = "pink";
+      } else if (randomNO < 0.8 && randomNO > 0.7){
+        document.body.style.backgroundColor = "grey";
+      } else if (randomNO < 0.9 && randomNO > 0.8){
+        document.body.style.backgroundColor = "cyan";
+      } else if (randomNO < 1 && randomNO > 0.9){
+        document.body.style.backgroundColor = "violet";
+      }
+    }
+  </script>
+</body>
+</html>

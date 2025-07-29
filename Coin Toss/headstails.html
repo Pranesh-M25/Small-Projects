@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Toss</title>
+</head>
+<body>
+  <button onclick="game('Heads');">Heads</button>
+  <button onclick="game('Tails');">Tails</button>
+  <button onclick="
+  score.win=0;
+  score.loss=0
+  localStorage.removeItem('score');">Reset Score</button>
+
+  <script>
+    const score = JSON.parse(localStorage.getItem('score')) || { win: 0, loss: 0 };
+    
+
+    function randomMove(){
+      const randomNo = Math.random();
+      let compMove='';
+      if(randomNo > 0 && randomNo < 1/2) {  
+       compMove = 'Heads'
+       console.log(compMove);
+     } else if ( randomNo < 1 && randomNo > 0.5) {
+       compMove = 'Tails'
+       console.log(compMove);
+     }
+     return compMove;
+    }
+    function game(myMove) {
+      const compMove = randomMove();
+      let result = '';
+      if(myMove === 'Heads') {
+        if(compMove === 'Heads'){
+          result = 'You Win';
+        } else if (compMove === 'Tails'){
+          result = 'You Loose';
+        }
+      }
+       else if(myMove === 'Tails'){
+          if (compMove === 'Heads'){
+            result='You Loose';
+          } else if(compMove === 'Tails'){
+            result ='You Win';
+          }
+        }
+        if (result === 'You Win') {
+          score.win +=1;
+        } else if (result === 'You Loose') {
+          score.loss +=1;
+        }
+
+       localStorage.setItem('score' , JSON.stringify(score));
+
+       alert(`${compMove} it is. ${result}
+       Wins: ${score.win}  Loses: ${score.loss}`);
+    }
+  </script>
+</body>
+</html>
+
